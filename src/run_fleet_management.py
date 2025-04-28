@@ -11,17 +11,17 @@ from typing import Dict
 current_dir = os.getcwd()
 
 # Define the folder names.
-fleet_management_folder = 'fleet-management-simulation'
+fleet_management_folder = 'RoboFleet5050'
 src_folder = 'src'
 
 if fleet_management_folder in current_dir.split('\\')[-1]:
-    # Do nothing if the current working directory is already 'fleet-management-simulation'.
+    # Do nothing if the current working directory is already 'RoboFleet5050'.
     pass
 elif src_folder in current_dir.split('\\')[-1]:
-    # Change the current working directory to the 'fleet-management-simulation' directory.
+    # Change the current working directory to the 'RoboFleet5050' directory.
     os.chdir(os.pardir)
 else:
-    raise Exception("Current working directory is neither'.../fleet-management-simulation', nor '.../src'.")
+    raise Exception("Current working directory is neither'.../RoboFleet5050', nor '.../src'.")
 
 # Add the path to the src directory to the system path.
 sys.path.insert(0, os.path.join(os.getcwd(), 'src'))
