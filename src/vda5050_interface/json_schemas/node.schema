@@ -1,0 +1,85 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "title": "node",
+    "required": [
+        "nodeId",
+        "sequenceId",
+        "released",
+        "actions"
+    ],
+    "properties": {
+        "nodeId": {
+            "type": "string",
+            "description": "Unique node identification",
+            "examples": [
+                "pumpenhaus_1",
+                "MONTAGE"
+            ]
+        },
+        "sequenceId": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Number to track the sequence of nodes and edges in an order and to simplify order updates.\nThe main purpose is to distinguish between a node which is passed more than once within one orderId. The variable sequenceId runs across all nodes and edges of the same order and is reset when a new orderId is issued."
+        },
+        "nodeDescription": {
+            "type": "string",
+            "description": "Additional information on the node."
+        },
+        "released": {
+            "type": "boolean",
+            "description": "True indicates that the node is part of the base. False indicates that the node is part of the horizon."
+        },
+        "nodePosition": {
+            "description": "Defines the position on a map in world coordinates. Each floor has its own map. All maps must use the same project specific global origin. \nOptional for vehicle-types that do not require the node position (e.g., line-guided vehicles).",
+            "type": "object",
+            "required": [
+                "x",
+                "y",
+                "mapId"
+            ],
+            "properties": {
+                "x": {
+                    "type": "number",
+                    "description": "X-position on the map in reference to the map coordinate system. Precision is up to the specific implementation."
+                },
+                "y": {
+                    "type": "number",
+                    "description":"Y-position on the map in reference to the map coordinate system. Precision is up to the specific implementation."
+                },
+                "theta": {
+                    "type": "number",
+                    "description": "Absolute orientation of the AGV on the node. \nOptional: vehicle can plan the path by itself.\nIf defined, the AGV has to assume the theta angle on this node. If previous edge disallows rotation, the AGV must rotate on the node. If following edge has a differing orientation defined but disallows rotation, the AGV is to rotate on the node to the edges desired rotation before entering the edge.",
+                    "minimum": -3.14159265359,
+                    "maximum": 3.14159265359
+                },
+                "allowedDeviationXy": {
+                    "type": "number",
+                    "description": "Indicates how exact an AGV has to drive over a node in order for it to count as traversed.\nIf = 0: no deviation is allowed (no deviation means within the normal tolerance of the AGV manufacturer).\nIf > 0: allowed deviation-radius in meters. If the AGV passes a node within the deviation-radius, the node is considered to have been traversed.",
+                    "minimum": 0
+                },
+                "allowedDeviationTheta": {
+                    "type": "number",
+                    "minimum": -3.141592654,
+                    "maximum": 3.141592654,
+                    "description": "Indicates how big the deviation of theta angle can be. \nThe lowest acceptable angle is theta - allowedDeviationTheta and the highest acceptable angle is theta + allowedDeviationTheta."
+                },
+                "mapId": {
+                    "description": "Unique identification of the map in which the position is referenced.\nEach map has the same origin of coordinates. When an AGV uses an elevator, e.g., leading from a departure floor to a target floor, it will disappear off the map of the departure floor and spawn in the related lift node on the map of the target floor.",
+                    "type": "string"
+                },
+                "mapDescription": {
+                    "description": "Additional information on the map.",
+                    "type": "string"
+                }
+            }
+        },
+        "actions": {
+            "description": "Array of actions to be executed on a node. Empty array, if no actions required.",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/action"
+            }
+        }
+    }
+}

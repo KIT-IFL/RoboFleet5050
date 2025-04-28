@@ -1,0 +1,77 @@
+{
+    "mapId": "Map_1",
+    "agents": [
+        {
+            "agentId": "1",
+            "stateTopic": "fleet_management/agent_1/state",
+            "orderTopic": "fleet_management/agent_1/order",
+            "agentPosition": {
+                "x": 10,
+                "y": 7,
+                "theta": 1
+            },
+            "agentVelocity": 1.5,
+            "agentRotationVelocity": 2
+        },
+        {
+            "agentId": "2",
+            "stateTopic": "fleet_management/agent_2/state",
+            "orderTopic": "fleet_management/agent_2/order",
+            "agentPosition": {
+                "x": 7,
+                "y": 5,
+                "theta": 0
+            },
+            "agentVelocity": 1.5,
+            "agentRotationVelocity": 2
+        },
+        {
+            "agentId": "3",
+            "stateTopic": "fleet_management/agent_3/state",
+            "orderTopic": "fleet_management/agent_3/order",
+            "agentPosition": {
+                "x": 9,
+                "y": 3,
+                "theta": -1
+            },
+            "agentVelocity": 1.5,
+            "agentRotationVelocity": 2
+        },
+        {
+            "agentId": "4",
+            "stateTopic": "fleet_management/agent_4/state",
+            "orderTopic": "fleet_management/agent_4/order",
+            "agentPosition": {
+                "x": 7,
+                "y": 9,
+                "theta": -2
+            },
+            "agentVelocity": 1.5,
+            "agentRotationVelocity": 2
+        },
+        {
+            "agentId": "5",
+            "stateTopic": "fleet_management/agent_5/state",
+            "orderTopic": "fleet_management/agent_5/order",
+            "agentPosition": {
+                "x": 4,
+                "y": 7,
+                "theta": 2
+            },
+            "agentVelocity": 1.5,
+            "agentRotationVelocity": 2
+        },
+        {
+            "agentId": "6",
+            "stateTopic": "fleet_management/agent_6/state",
+            "orderTopic": "fleet_management/agent_6/order",
+            "agentPosition": {
+                "x": 12,
+                "y": 9,
+                "theta": -3
+            },
+            "agentVelocity": 1.5,
+            "agentRotationVelocity": 2
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "mqtt_broker_ip": "localhost",
+    "_comment1": "IP address of the MQTT broker.",
+
+    "mqtt_broker_port": 1883,
+    "_comment2": "Port of the MQTT broker.",
+
+    "pygame_fps": 30,
+    "_comment3": "Frame rate of the visualisation.",
+
+    "pygame_scaling_factor": 60,
+    "_comment4": "Scaling factor of the visualisation.",
+
+    "fleet_management_mode": "SIMULATED_AGENTS",
+    "_comment5": "Mode of the fleet management. Options: SIMULATED_AGENTS or REAL_AGENTS.",
+
+    "run_time": 60000,
+    "_comment6": "Run time in seconds. Value can be set high for 'infinite' run time.",
+
+    "agent_rotation_diameter": 0.8,
+    "_comment7": "Diameter of the circle the agent requires to rotate around its kinematic center point in meters.",
+
+    "node_reservation_timeout": 60,
+    "_comment8": "Maximum waiting time for a node reservation before the error flag of the agent is set in seconds.",
+
+    "process_time_loading_unloading": 3,
+    "_comment9": "Time for loading and unloading of the agents at the stations in seconds."
+}
