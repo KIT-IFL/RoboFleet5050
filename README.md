@@ -31,11 +31,11 @@ The following visualizations demonstrate how the simulated mobile robots perform
 - The processing (loading and unloading) of the transport unit takes a defined time.
 - After unloading, the mobile robots return to a dwelling node to await their next task.
 
-<p align="center">
-    <img src="./data/output_files/demo_videos/FM_2Agents_TestArea.gif" height="400" alt="Fleet Management Simulation - Test Area" style="margin-right: 50px; border: 2px solidrgb(0, 0, 0);">
-    <img src="./data/output_files/demo_videos/FM_6Agents_ArenaArea.gif" height="400" alt="Fleet Management Simulation - Arena Area" style="border: 2px solidrgb(0, 0, 0);">
+<p align="left">
+    <img src="./data/output_files/demo_videos/FM_2Agents_TestArea.gif" width="500" alt="Fleet Management Simulation - Test Area" style="margin-left: 40px;">
+    <img src="./data/output_files/demo_videos/FM_6Agents_ArenaArea.gif" width="500" alt="Fleet Management Simulation - Arena Area" style="margin-left: 40px;">
 </p> 
-</p> <p align="center"> <b>Left:</b> Two mobile robots are controlled in a simple test layout with four stations.<br> <b>Right:</b> Six mobile robots are controlled in a more complex layout with five stations. </p>
+</p> <p align="left"> <b>Top:</b> Two mobile robots are controlled in a simple test layout with four stations.<br> <b>Bottom:</b> Six mobile robots are controlled in a more complex layout with five stations. </p>
 
 ## Project Setup Guide
 
