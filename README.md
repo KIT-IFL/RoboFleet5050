@@ -88,10 +88,10 @@ conda env create -n fleet_management_env -f environment.yml
 All configuration files are located in the `data/input_files/` directory:
 
 - `lif_file.json`: Defines the layout including nodes, edges, and stations.
-- `agentsInitialization_file.json`: Contains initialization information for each mobile robot and their communication topics.
+- `agentsInitialization_file.json`: Contains initialization information for each mobile robot and their MQTT communication topics.
 - `config_file.json`: General configuration settings including:
     - MQTT broker
-    - Simulation and visulaization parameters
+    - Simulation and visualization parameters
     - Simulation mode (control of simulated or real mobile robots)
 
 ## Acknowledgement
