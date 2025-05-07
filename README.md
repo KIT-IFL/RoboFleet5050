@@ -12,7 +12,7 @@ The system feautures **prioritized multi-robot path planning** inspired by [Coop
     - Expandable to other topics (`instantAction`, `factsheet`, etc.)
 - Path planning for **lifelong tranportation processes**:
     - Inpired by [Cooperative A*](https://dl.acm.org/doi/10.5555/3022473.3022494)
-    - Uses **dwelling nodes** for collision and deadlock-free planning
+    - Uses **dwelling nodes** for collision and deadlock-free planning (number of dweeling nodes must be equal or larger than number of mobile robots)
     - Path structure: `Dwelling → Pickup → Dropoff → Dwelling`
 - **Prevents resource conflicts and deadlocks** using prioritized access to resources (nodes, edges, stations) inpired by the concept of [Logical Time](https://ieeexplore.ieee.org/abstract/document/9261470)
 - Integrated **PyGame simulation**

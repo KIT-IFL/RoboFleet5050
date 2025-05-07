@@ -94,6 +94,10 @@ class FleetManagement:
         """
         Initialize the agents by moving them to the dwelling nodes.
         """
+        # The number of dwelling nodes must be equal or larger as the number of mobile robots.
+        if len(self.graph.dwelling_nodes) < len(self.agents_object.agents):
+            raise ValueError(f"The number of dwelling nodes must be equal or larger as the number of mobile robots.")
+
         agents_not_on_dwelling_nodes = []
         agents_blocking_dwelling_nodes = {}
         dwelling_nodes_blocked = []
@@ -684,7 +688,7 @@ class PathPlanning():
 
                 if not paths:
                     # No path found connecting the start and end node.
-                    raise ValueError(f"No path segment {goal_index + 1} found connecting the start {start_node} and goal node {goal_node}.")
+                    raise ValueError(f"No path segment {goal_index + 1} found connecting the start node {start_node} and goal node {goal_node}.")
 
                 # Check the paths for collisions with other agents.
                 for path in paths:
